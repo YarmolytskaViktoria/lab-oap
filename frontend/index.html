@@ -1,12 +1,86 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="uk">
 <head>
-    <meta charset="utf-8" />
-    <title>ЛР1: Мій застосунок</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ЛР1 – Мій застосунок</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Привіт</h1>
-    <p>Це перша лабораторна робота</p>
+
+<h1>Мій веб-застосунок (варіант №12)</h1>
+
+<div class="container">
+  <main class="flexbox">
+
+    <!-- ФОРМА -->
+    <section class="create-section">
+      <h3>Додати продукт</h3>
+
+      <form id="createForm" novalidate>
+
+        <div class="field">
+          <label for="softInput">Software Product:</label>
+          <input id="softInput" type="text">
+          <p class="error-text" id="softError"></p>
+        </div>
+
+        <div class="field">
+          <label for="licenseSelect">License:</label>
+          <select id="licenseSelect">
+            <option value="">Оберіть ліцензію</option>
+            <option value="Freeware">Freeware</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Shareware">Shareware</option>
+          </select>
+          <p class="error-text" id="licenseError"></p>
+        </div>
+
+        <div class="field">
+          <label for="requestInput">Request ID:</label>
+          <input id="requestInput" type="number">
+          <p class="error-text" id="requestError"></p>
+        </div>
+
+        <div class="field">
+          <label for="userInput">User Email:</label>
+          <input id="userInput" type="email">
+          <p class="error-text" id="userError"></p>
+        </div>
+
+        <div class="buttons">
+          <button type="submit">Додати</button>
+          <button type="button" id="clearBtn">Очистити</button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- ТАБЛИЦЯ -->
+    <section>
+      <h3>Список продуктів</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Software</th>
+            <th>License</th>
+            <th>Request ID</th>
+            <th>Email</th>
+            <th>Дії</th>
+          </tr>
+        </thead>
+        <tbody id="productsTableBody">
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+</div>
+
 </body>
 </html>
+

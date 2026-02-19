@@ -1,0 +1,52 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flexbox {
+  display: flex;
+  gap: 50px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+input.invalid,
+select.invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+
+
